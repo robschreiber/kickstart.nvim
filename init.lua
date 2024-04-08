@@ -158,7 +158,7 @@ vim.opt.scrolloff = 10
 --  See `:help vim.keymap.set()`
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
@@ -551,6 +551,9 @@ require('lazy').setup({
         -- tsserver = {},
         --
 
+        tsserver = {},
+        csharp_ls = {},
+        cssls = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -802,7 +805,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'typescript', 'c_sharp' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
