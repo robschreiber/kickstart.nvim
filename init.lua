@@ -154,6 +154,15 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Shell settings
+vim.opt.shell = vim.fn.executable 'pwsh' and 'pwsh' or 'powershell'
+vim.opt.shellcmdflag =
+  '-NoLogo -NoProfile -ExecutionPolicy Unrestricted -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+vim.opt.shellredir = '-RedirectStandardOutput %s -NoNewWindow -Wait'
+vim.opt.shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+vim.opt.shellquote = ''
+vim.opt.shellxquote = ''
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
