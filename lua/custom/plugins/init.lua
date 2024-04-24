@@ -4,13 +4,13 @@
 -- See the kickstart.nvim README for more information
 return {
   {
-    "otavioschwanck/arrow.nvim",
+    'otavioschwanck/arrow.nvim',
     opts = {
       show_icons = true,
       leader_key = ';', -- Recommended to be a single key
       buffer_leader_key = 'm', -- Per Buffer Mappings
-      global_bookmarks = true
-    }
+      global_bookmarks = true,
+    },
   },
   -- {
   --   'ThePrimeagen/harpoon',
@@ -45,5 +45,11 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter-context',
+    opts = {
+      max_lines = 5,
+    },
+  },
+  {
+    'Hoffs/omnisharp-extended-lsp.nvim',
   },
 }
