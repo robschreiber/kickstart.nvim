@@ -172,6 +172,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 
+-- Diffs
+vim.opt.diffopt = 'internal,filler,closeoff,vertical,iwhiteall'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
