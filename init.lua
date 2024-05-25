@@ -612,6 +612,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         --
 
+        jsonls = {},
         tsserver = {},
         omnisharp = {},
         cssls = {},
