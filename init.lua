@@ -614,6 +614,9 @@ require('lazy').setup({
 
         jsonls = {},
         tsserver = {},
+        angularls = {
+          root_dir = require('lspconfig.util').root_pattern('angular.json', 'project.json'),
+        },
         omnisharp = {},
         cssls = {},
         lua_ls = {
